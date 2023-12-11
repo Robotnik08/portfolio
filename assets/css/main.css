@@ -542,14 +542,16 @@ video {
   margin: auto;
 }
 
-.h-max {
-  height: -moz-max-content;
-  height: max-content;
+.block {
+  display: block;
 }
 
-.w-max {
-  width: -moz-max-content;
-  width: max-content;
+.h-screen {
+  height: 100vh;
+}
+
+.w-screen {
+  width: 100vw;
 }
 
 .bg-black {
@@ -559,6 +561,11 @@ video {
 
 .text-center {
   text-align: center;
+}
+
+.text-9xl {
+  font-size: 8rem;
+  line-height: 1;
 }
 
 .font-bold {
@@ -575,4 +582,8 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
+}
+
+.background {
+  z-index: -1;
 }

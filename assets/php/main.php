@@ -4,9 +4,14 @@
 <?php include_once 'assets/html/header.php'; ?>
         <script src="assets/js/space-background.js" type="module" defer></script>
     </head>
-    <body>
-        <main>
-            <div class="background bg-black w-max h-max absolute">
+    <body class="bg-black">
+        <main class="w-screen h-screen">
+            <noscript class="w-screen h-screen block">
+                <dialog open>
+                    <p class="font-bold text-9xl text-white text-center m-auto">Please enable JavaScript</p>
+                </dialog>
+            </noscript>
+            <div class="background w-screen h-screen absolute">
                 <canvas id="space-background">
 
                 </canvas>
