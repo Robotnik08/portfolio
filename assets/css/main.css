@@ -542,16 +542,48 @@ video {
   margin: auto;
 }
 
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
 .block {
   display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.h-full {
+  height: 100%;
 }
 
 .h-screen {
   height: 100vh;
 }
 
+.w-full {
+  width: 100%;
+}
+
 .w-screen {
   width: 100vw;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .bg-black {
@@ -563,6 +595,16 @@ video {
   text-align: center;
 }
 
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.text-8xl {
+  font-size: 6rem;
+  line-height: 1;
+}
+
 .text-9xl {
   font-size: 8rem;
   line-height: 1;
@@ -572,9 +614,24 @@ video {
   font-weight: 700;
 }
 
+.text-green-400 {
+  --tw-text-opacity: 1;
+  color: rgb(74 222 128 / var(--tw-text-opacity));
+}
+
+.text-green-700 {
+  --tw-text-opacity: 1;
+  color: rgb(21 128 61 / var(--tw-text-opacity));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+:root {
+  --text-glow-colour: #00e660;
+  --highlight-glow-colour: #00c4e6;
 }
 
 html, body {
@@ -586,4 +643,172 @@ html, body {
 
 .background {
   z-index: -1;
+}
+
+/* fonts */
+
+@font-face {
+  font-family: "Bebas";
+
+  src: url("../fonts/BebasNeue-Regular.ttf");
+}
+
+.font-bebas {
+  font-family: "Bebas";
+}
+
+@font-face {
+  font-family: "Chivo";
+
+  src: url("../fonts/ChivoMono-Black.ttf");
+}
+
+.font-chivo {
+  font-family: "Chivo";
+}
+
+@font-face {
+  font-family: "Jolly";
+
+  src: url("../fonts/JollyLodger-Regular.ttf");
+}
+
+.font-jolly {
+  font-family: "Jolly";
+}
+
+@font-face {
+  font-family: "Barcode";
+
+  src: url("../fonts/LibreBarcode39Text-Regular.ttf");
+}
+
+.font-barcode {
+  font-family: "Barcode";
+}
+
+@font-face {
+  font-family: "Mina";
+
+  src: url("../fonts/Mina-Regular.ttf");
+}
+
+.font-mina {
+  font-family: "Mina";
+}
+
+@font-face {
+  font-family: "Pacifico";
+
+  src: url("../fonts/Pacifico-Regular.ttf");
+}
+
+.font-pacifico {
+  font-family: "Pacifico";
+}
+
+@font-face {
+  font-family: "Puppies";
+
+  src: url("../fonts/PuppiesPlay-Regular.ttf");
+}
+
+.font-puppies {
+  font-family: "Puppies";
+}
+
+@font-face {
+  font-family: "Doodle";
+
+  src: url("../fonts/RubikDoodleTriangles-Regular.ttf");
+}
+
+.font-doodle {
+  font-family: "Doodle";
+}
+
+@font-face {
+  font-family: "Paint";
+
+  src: url("../fonts/RubikWetPaint-Regular.ttf");
+}
+
+.font-paint {
+  font-family: "Paint";
+}
+
+@font-face {
+  font-family: "terminal";
+
+  src: url("../fonts/3270Condensed-Regular.ttf");
+}
+
+.terminal {
+  font-family: "terminal";
+}
+
+.blink {
+  animation: blinker 1s linear infinite;
+}
+
+.title-disappear {
+  animation: disappear 4s linear 1 forwards;
+}
+
+.main-appearance {
+  animation: appear 0.1s linear 1 forwards;
+}
+
+.block-wrapper {
+  display: none;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(74 222 128 / var(--tw-text-opacity));
+  background-color: #004F00;
+  text-shadow: 0 0 10px #3f3, 0 0 20px #3f3, 0 0 30px var(--text-glow-colour), 0 0 30px var(--text-glow-colour), 0 0 50px var(--text-glow-colour), 0 0 60px var(--text-glow-colour), 0 0 80px var(--text-glow-colour);
+}
+
+.highlight {
+  text-shadow: 0 0 10px #33f, 0 0 20px #33f, 0 0 30px var(--highlight-glow-colour), 0 0 30px var(--highlight-glow-colour), 0 0 60px var(--highlight-glow-colour), 0 0 70px var(--highlight-glow-colour), 0 0 100px var(--highlight-glow-colour);
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+
+  10% {
+    opacity: 1;
+    /* zoom in */
+    transform: scale(1.3);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(30);
+  }
+}
+
+@keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }

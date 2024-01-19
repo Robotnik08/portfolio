@@ -20,6 +20,7 @@ export class Canvas {
 
     setColor(color) {
         this.ctx.fillStyle = color;
+        this.ctx.strokeStyle = color;
     }
 
     setFont(font) {
@@ -38,8 +39,9 @@ export class Canvas {
         this.ctx.fillText(text, x, y);
     }
 
-    drawLine(x1, y1, x2, y2) {
+    drawLine(x1, y1, x2, y2, radius = 1) {
         this.ctx.beginPath();
+        this.ctx.lineWidth = radius * 2;
         this.ctx.moveTo(x1, y1);
         this.ctx.lineTo(x2, y2);
         this.ctx.closePath();
@@ -50,6 +52,7 @@ export class Canvas {
         this.ctx.beginPath();
         this.ctx.arc(x, y, radius, 0, 2 * Math.PI);
         this.ctx.closePath();
+        this.ctx.fill();
         this.ctx.stroke();
     }
 }
