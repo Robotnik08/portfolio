@@ -542,6 +542,14 @@ video {
   margin: auto;
 }
 
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
 .mt-6 {
   margin-top: 1.5rem;
 }
@@ -552,6 +560,10 @@ video {
 
 .flex {
   display: flex;
+}
+
+.aspect-square {
+  aspect-ratio: 1 / 1;
 }
 
 .h-full {
@@ -586,9 +598,27 @@ video {
   overflow: hidden;
 }
 
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-purple-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(88 28 135 / var(--tw-bg-opacity));
+}
+
+.bg-red-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
+}
+
+.p-3 {
+  padding: 0.75rem;
 }
 
 .text-center {
@@ -597,6 +627,11 @@ video {
 
 .text-5xl {
   font-size: 3rem;
+  line-height: 1;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
   line-height: 1;
 }
 
@@ -629,9 +664,17 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.drop-shadow-lg {
+  --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 :root {
   --text-glow-colour: #00e660;
-  --highlight-glow-colour: #00c4e6;
+  --highlight-glow-colour: #e60000;
+  --tip-glow-colour: #f0f;
+  --terminal-background-colour: #003000;
+  --planet-radius: 90%;
 }
 
 html, body {
@@ -643,98 +686,6 @@ html, body {
 
 .background {
   z-index: -1;
-}
-
-/* fonts */
-
-@font-face {
-  font-family: "Bebas";
-
-  src: url("../fonts/BebasNeue-Regular.ttf");
-}
-
-.font-bebas {
-  font-family: "Bebas";
-}
-
-@font-face {
-  font-family: "Chivo";
-
-  src: url("../fonts/ChivoMono-Black.ttf");
-}
-
-.font-chivo {
-  font-family: "Chivo";
-}
-
-@font-face {
-  font-family: "Jolly";
-
-  src: url("../fonts/JollyLodger-Regular.ttf");
-}
-
-.font-jolly {
-  font-family: "Jolly";
-}
-
-@font-face {
-  font-family: "Barcode";
-
-  src: url("../fonts/LibreBarcode39Text-Regular.ttf");
-}
-
-.font-barcode {
-  font-family: "Barcode";
-}
-
-@font-face {
-  font-family: "Mina";
-
-  src: url("../fonts/Mina-Regular.ttf");
-}
-
-.font-mina {
-  font-family: "Mina";
-}
-
-@font-face {
-  font-family: "Pacifico";
-
-  src: url("../fonts/Pacifico-Regular.ttf");
-}
-
-.font-pacifico {
-  font-family: "Pacifico";
-}
-
-@font-face {
-  font-family: "Puppies";
-
-  src: url("../fonts/PuppiesPlay-Regular.ttf");
-}
-
-.font-puppies {
-  font-family: "Puppies";
-}
-
-@font-face {
-  font-family: "Doodle";
-
-  src: url("../fonts/RubikDoodleTriangles-Regular.ttf");
-}
-
-.font-doodle {
-  font-family: "Doodle";
-}
-
-@font-face {
-  font-family: "Paint";
-
-  src: url("../fonts/RubikWetPaint-Regular.ttf");
-}
-
-.font-paint {
-  font-family: "Paint";
 }
 
 @font-face {
@@ -756,7 +707,7 @@ html, body {
 }
 
 .main-appearance {
-  animation: appear 0.1s linear 1 forwards;
+  animation: appear 0.2s linear 1 forwards;
 }
 
 .block-wrapper {
@@ -772,12 +723,22 @@ html, body {
   padding-bottom: 1.25rem;
   --tw-text-opacity: 1;
   color: rgb(74 222 128 / var(--tw-text-opacity));
-  background-color: #004F00;
-  text-shadow: 0 0 10px #3f3, 0 0 20px #3f3, 0 0 30px var(--text-glow-colour), 0 0 30px var(--text-glow-colour), 0 0 50px var(--text-glow-colour), 0 0 60px var(--text-glow-colour), 0 0 80px var(--text-glow-colour);
+  text-shadow: 0 0 10px #3f3, 0 0 30px var(--text-glow-colour), 0 0 50px var(--text-glow-colour);
+  background-color: black;
+  background-image: radial-gradient(
+        rgba(0, 150, 0, 0.7), black 120%
+    );
+}
+
+.tip-text {
+  text-shadow: 0 0 10px #f3f, 0 0 30px var(--tip-glow-colour), 0 0 50px var(--tip-glow-colour);
 }
 
 .highlight {
-  text-shadow: 0 0 10px #33f, 0 0 20px #33f, 0 0 30px var(--highlight-glow-colour), 0 0 30px var(--highlight-glow-colour), 0 0 60px var(--highlight-glow-colour), 0 0 70px var(--highlight-glow-colour), 0 0 100px var(--highlight-glow-colour);
+  --tw-text-opacity: 1;
+  color: rgb(254 242 242 / var(--tw-text-opacity));
+  cursor: pointer;
+  text-shadow: 0 0 10px #f33, 0 0 30px var(--highlight-glow-colour), 0 0 50px var(--highlight-glow-colour);
 }
 
 @keyframes blinker {
@@ -789,6 +750,7 @@ html, body {
 @keyframes disappear {
   0% {
     opacity: 1;
+    pointer-events: none;
   }
 
   10% {
@@ -806,9 +768,74 @@ html, body {
 @keyframes appear {
   0% {
     transform: scale(0);
+    pointer-events: none;
   }
 
   100% {
     transform: scale(1);
+    pointer-events: auto;
+  }
+}
+
+.tip {
+  pointer-events: none;
+}
+
+/* Planet render (3d sphere) */
+
+.planet-render {
+  margin: calc(var(--planet-radius) * 0.5);
+  perspective: calc(var(--planet-radius) * 4);
+  perspective-origin: 50% 50%;
+  margin: 0;
+}
+
+.sphere {
+  position: relative;
+  margin: 0 auto;
+  width: var(--planet-radius);
+  height: var(--planet-radius);
+  transform-style: preserve-3d;
+  animation: spin 60s infinite linear;
+}
+
+div.equator {
+  transform:rotateX(90deg);
+}
+
+.sphere > div {
+  border: solid 10px #0c0;
+  border-radius: 50%;
+  height: var(--planet-radius);
+  opacity: 0.8;
+  position: absolute;
+  width: var(--planet-radius);
+}
+
+div.tropic {
+  height: calc(var(--planet-radius) - calc(var(--planet-radius)*0.14));
+  margin: calc(var(--planet-radius)*0.07);
+  width: calc(var(--planet-radius) - calc(var(--planet-radius)*0.14));
+}
+
+div.north {
+  transform: translateY(calc(-0.33 * var(--planet-radius))) rotateX(90deg);
+}
+
+div.south {
+  transform: translateY(calc(0.33 * var(--planet-radius))) rotateX(90deg);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateX(15deg) rotateY(0) rotateZ(15deg);
+  }
+
+  50% {
+    transform: rotateX(-15deg) rotateY(180deg) rotateZ(-15deg);
+  }
+
+  100% {
+    transform: rotateX(15deg) rotateY(360deg) rotateZ(15deg);
   }
 }

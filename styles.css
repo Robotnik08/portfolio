@@ -4,7 +4,12 @@
 
 :root {
     --text-glow-colour: #00e660;
-    --highlight-glow-colour: #00c4e6;
+    --highlight-glow-colour: #e60000;
+    --tip-glow-colour: #f0f;
+    
+    --terminal-background-colour: #003000;
+
+    --planet-radius: 90%;
 }
 
 html, body {
@@ -16,89 +21,6 @@ html, body {
 
 .background {
     z-index: -1;
-}
-
-/* fonts */
-
-@font-face {
-    font-family: "Bebas";
-    src: url("../fonts/BebasNeue-Regular.ttf");
-}
-
-.font-bebas {
-    font-family: "Bebas";
-}
-
-@font-face {
-    font-family: "Chivo";
-    src: url("../fonts/ChivoMono-Black.ttf");
-}
-
-.font-chivo {
-    font-family: "Chivo";
-}
-
-@font-face {
-    font-family: "Jolly";
-    src: url("../fonts/JollyLodger-Regular.ttf");
-}
-
-.font-jolly {
-    font-family: "Jolly";
-}
-
-@font-face {
-    font-family: "Barcode";
-    src: url("../fonts/LibreBarcode39Text-Regular.ttf");
-}
-
-.font-barcode {
-    font-family: "Barcode";
-}
-
-@font-face {
-    font-family: "Mina";
-    src: url("../fonts/Mina-Regular.ttf");
-}
-
-.font-mina {
-    font-family: "Mina";
-}
-
-@font-face {
-    font-family: "Pacifico";
-    src: url("../fonts/Pacifico-Regular.ttf");
-}
-
-.font-pacifico {
-    font-family: "Pacifico";
-}
-
-@font-face {
-    font-family: "Puppies";
-    src: url("../fonts/PuppiesPlay-Regular.ttf");
-}
-
-.font-puppies {
-    font-family: "Puppies";
-}
-
-@font-face {
-    font-family: "Doodle";
-    src: url("../fonts/RubikDoodleTriangles-Regular.ttf");
-}
-
-.font-doodle {
-    font-family: "Doodle";
-}
-
-@font-face {
-    font-family: "Paint";
-    src: url("../fonts/RubikWetPaint-Regular.ttf");
-}
-
-.font-paint {
-    font-family: "Paint";
 }
 
 @font-face {
@@ -120,18 +42,28 @@ html, body {
 }
 
 .main-appearance {
-    animation: appear 0.1s linear 1 forwards;
+    animation: appear 0.2s linear 1 forwards;
 }
 
 .block-wrapper {
     @apply flex-col items-center justify-center hidden h-full w-full text-green-400 px-10 py-5;
-    background-color: #004F00;
 
-    text-shadow: 0 0 10px #3f3, 0 0 20px #3f3, 0 0 30px var(--text-glow-colour), 0 0 30px var(--text-glow-colour), 0 0 50px var(--text-glow-colour), 0 0 60px var(--text-glow-colour), 0 0 80px var(--text-glow-colour);
+    text-shadow: 0 0 10px #3f3, 0 0 30px var(--text-glow-colour), 0 0 50px var(--text-glow-colour);
+
+    background-color: black;
+    background-image: radial-gradient(
+        rgba(0, 150, 0, 0.7), black 120%
+    );
+}
+
+.tip-text {
+    text-shadow: 0 0 10px #f3f, 0 0 30px var(--tip-glow-colour), 0 0 50px var(--tip-glow-colour);
 }
 
 .highlight {
-    text-shadow: 0 0 10px #33f, 0 0 20px #33f, 0 0 30px var(--highlight-glow-colour), 0 0 30px var(--highlight-glow-colour), 0 0 60px var(--highlight-glow-colour), 0 0 70px var(--highlight-glow-colour), 0 0 100px var(--highlight-glow-colour);
+    @apply text-red-50;
+    cursor: pointer;
+    text-shadow: 0 0 10px #f33, 0 0 30px var(--highlight-glow-colour), 0 0 50px var(--highlight-glow-colour);
 }
 
 @keyframes blinker {
@@ -143,6 +75,7 @@ html, body {
 @keyframes disappear {
     0% {
         opacity: 1;
+        pointer-events: none;
     }
     10% {
         opacity: 1;
@@ -158,8 +91,74 @@ html, body {
 @keyframes appear {
     0% {
         transform: scale(0);
+        pointer-events: none;
     }
     100% {
         transform: scale(1);
+        pointer-events: auto;
+    }
+}
+
+
+.tip {
+    pointer-events: none;
+}
+
+/* Planet render (3d sphere) */
+
+.planet-render {
+    margin: calc(var(--planet-radius) * 0.5);
+
+    perspective: calc(var(--planet-radius) * 4);
+    perspective-origin: 50% 50%;
+    margin: 0;
+}
+
+.sphere {
+    position: relative;
+    margin: 0 auto;
+    width: var(--planet-radius);
+    height: var(--planet-radius);
+    transform-style: preserve-3d;
+
+    animation: spin 60s infinite linear;
+}
+
+div.equator {
+    transform:rotateX(90deg);
+}
+
+.sphere > div {
+    border: solid 10px #0c0;
+    border-radius: 50%;
+    height: var(--planet-radius);
+    opacity: 0.8;
+    position: absolute;
+    width: var(--planet-radius);
+}
+
+div.tropic {
+    height: calc(var(--planet-radius) - calc(var(--planet-radius)*0.14));
+    margin: calc(var(--planet-radius)*0.07);
+    width: calc(var(--planet-radius) - calc(var(--planet-radius)*0.14));
+}
+
+div.north {
+    transform: translateY(calc(-0.33 * var(--planet-radius))) rotateX(90deg);
+}
+
+div.south {
+    transform: translateY(calc(0.33 * var(--planet-radius))) rotateX(90deg);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotateX(15deg) rotateY(0) rotateZ(15deg);
+    }
+    50% {
+        transform: rotateX(-15deg) rotateY(180deg) rotateZ(-15deg);
+    }
+    100% {
+        transform: rotateX(15deg) rotateY(360deg) rotateZ(15deg);
     }
 }

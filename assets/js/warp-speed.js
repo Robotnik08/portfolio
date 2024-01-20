@@ -31,6 +31,10 @@ for (let i = 0; i < 150; i++) {
         )
     );
 }
+
+for (let i = 0; i < 300; i++) {
+    moveStars(1);
+}
 function calcSize (position) {
     return position.distance(new Vector2(0.5, 0.5));
 }
@@ -81,11 +85,6 @@ function update (deltaTime) {
     moveStars(deltaTime);
     drawStars();
 
-}
-
-// simulate 200 frames to get the stars in position
-for (let i = 0; i < 200; i++) {
-    moveStars(1);
 }
 
 time.subscribe(update);

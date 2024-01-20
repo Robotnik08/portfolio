@@ -9,6 +9,8 @@ export class Time {
         this.lastTime = new Date().getTime();
 
         this.stopped = false;
+
+        this.fps = 0;
     }
 
     update () {
@@ -20,6 +22,8 @@ export class Time {
         const currentTime = new Date().getTime();
         this.deltaTime = (currentTime - this.lastTime) / this.CLOCKS_PER_SEC * this.TICKS_PER_SEC;
         this.lastTime = currentTime;
+
+        this.fps = 1 / this.deltaTime * this.TICKS_PER_SEC;
 
         for (let func of this.subscribers) {
             func(this.deltaTime);
