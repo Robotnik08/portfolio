@@ -8,7 +8,7 @@ const canvas = new Canvas("main-canvas");
 const time = new Time();
 const input = new Input();
 
-let warpspace = false;
+window.warpspace = false;
 
 class Star {
     constructor (position, color) {
@@ -54,7 +54,7 @@ function moveStars (deltaTime) {
 
     for (let i in stars) {
         const distanceFromCenter = stars[i].position.distance(new Vector2(0.5, 0.5));
-        const speed = (1 - distanceFromCenter) / (warpspace ? 50 : 200);
+        const speed = (1 - distanceFromCenter) / (window.warpspace ? 50 : 200);
         stars[i].last_pos = stars[i].position;
         stars[i].position = stars[i].position.add(stars[i].position.subtract(new Vector2(0.5, 0.5)).normalize().multiply(speed * deltaTime));
 
@@ -74,7 +74,7 @@ function moveStars (deltaTime) {
 
 function update (deltaTime) {
     canvas.fitScreen();
-    if (warpspace) {
+    if (window.warpspace) {
         canvas.setColor(new Color(0, 0, 0, 0.1));
         canvas.drawRect(0, 0, canvas.width, canvas.height);
     } else {
@@ -104,11 +104,11 @@ document.addEventListener('keydown', start);
 function startSequence () {
     document.getElementById('titles').classList.add('title-disappear');
     setTimeout(() => {
-        warpspace = true;
+        window.warpspace = true;
     }, 4000/10);
     setTimeout(() => {
         document.getElementById('titles').style.display = 'none';
-        warpspace = false;
+        window.warpspace = false;
         
         document.getElementById('main').style.display = 'flex';
         document.getElementById('main').classList.add('main-appearance');

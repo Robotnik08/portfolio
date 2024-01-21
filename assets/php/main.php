@@ -5,6 +5,7 @@
         <script src="assets/js/warp-speed.js" type="module" defer></script>
         <script src="assets/js/hovertip.js" type="module" defer></script>
         <script src="assets/js/planet-render.js" defer></script>
+        <script src="assets/js/option-select.js" defer></script>
 
     </head>
     <body class="bg-black overflow-hidden">
@@ -22,23 +23,29 @@
             <div class="w-full h-full absolute content overflow-hidden">
                 <div class="main-wrapper w-full h-full flex items-center center justify-center terminal flex-col">
                     <div id="titles" class="text-center">
-                        <h1 class="font-bold text-green-700 text-9xl">Sebastiaan Heins</h1>
-                        <h2 class="font-bold text-green-400 text-5xl blink">Click anywhere to start the engines</h2>
+                        <h1 class="font-bold text-green-700 text-4xl md:text-9xl">Sebastiaan Heins</h1>
+                        <h2 class="font-bold text-green-400 text-2xl md:text-5xl blink">Click anywhere to start the engines</h2>
                     </div>
-                    <div id="main" class="block-wrapper">
-                        <h2 class="text-white text-8xl block-title w-full">Select planet</h2>
+                    <div id="main" class="block-wrapper hidden">
+                        <h2 class="text-white text-4xl md:text-9xl block-title w-full">Select destination</h2>
                         <div class="text-white w-full block-area">
-                            <h3 class="text-5xl mt-6">
+                            <h3 class="text-lg md:text-5xl mt-3 md:mt-6">
                                 Welcome to my spaceship! It's called the <span id="porttip" class="highlight">Portfol-io</span>.
                                 <br>
-                                Check out these planets I've created. They're all handcrafted by me, with a little help from <span id="langs" class="highlight">HTML, CSS and JS</span>.
+                                Check out my planet! It contains all the information you need to know about me.
                             </h3>
                         </div>
-                        <div class="text-white w-full h-full flex">
-                            <div id="planet-select" class="h-full aspect-square bg-red-200 mr-auto">
-
+                        <div class="text-white w-full h-full flex flex-col md:flex-row">
+                            <div id="planet-select" class="md:h-full md:aspect-square md:mr-auto text-2xl md:text-6xl p-4 md:p-20">
+                                <h3 class="menu-sel"><span class="option blink">></span>&nbsp;About</h3>
+                                <h3 class="menu-sel"><span class="option blink">></span>&nbsp;Skills</h3>
+                                <h3 class="menu-sel"><span class="option blink">></span>&nbsp;Projects</h3>
+                                <h3 class="menu-sel"><span class="option blink">></span>&nbsp;Experience</h3>
+                                <h3 class="menu-sel"><span class="option blink">></span>&nbsp;Education</h3>
+                                <h3 class="menu-sel"><span class="option blink">></span>&nbsp;Hobbies</h3>
+                                <h3 class="menu-sel"><span class="option blink">></span>&nbsp;Contact</h3>
                             </div>
-                            <div id="planet-render" class="h-full aspect-square ml-auto">
+                            <div id="planet-render" class="md:h-full aspect-square md:ml-auto">
                                 <div id="planet" class="sphere m-auto">
                                     <div class="equator"></div>
                                     <div class="tropic north"></div>

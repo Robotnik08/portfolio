@@ -9,7 +9,6 @@ const tip = document.querySelector(".tip");
 function showTip (text) {
     setTip(text);
     tip.style.visibility = "visible";
-
 }
 
 function hideTip () {
@@ -39,7 +38,7 @@ time.subscribe(() => {
 time.start();
 
 
-
+// Tip text for the ship version
 const porttip = document.getElementById("porttip");
 
 porttip.addEventListener("mouseover", () => {
@@ -47,16 +46,5 @@ porttip.addEventListener("mouseover", () => {
 });
 
 porttip.addEventListener("mouseout", () => {
-    hideTip();
-});
-
-
-const langs = document.getElementById("langs");
-
-langs.addEventListener("mouseover", () => {
-    showTip('Backend is PHP');
-});
-
-langs.addEventListener("mouseout", () => {
     hideTip();
 });
