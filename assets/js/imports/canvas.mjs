@@ -55,4 +55,8 @@ export class Canvas {
         this.ctx.fill();
         this.ctx.stroke();
     }
+
+    drawPixel (x, y) {
+        this.ctx.fillRect(x, y, 1, 1);
+    }
 }

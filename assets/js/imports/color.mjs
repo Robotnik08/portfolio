@@ -8,6 +8,18 @@ export class Color {
         this.a = a;
     }
 
+    get hex () {
+        return this.toHex();
+    }
+
+    get hexA () {
+        return this.toHexA();
+    }
+
+    get rgba () {
+        return this.toString();
+    }
+
     toString () {
         return `rgba(${this.r}, ${this.g}, ${this.b}, ${this.a})`;
     }

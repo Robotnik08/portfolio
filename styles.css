@@ -8,6 +8,7 @@
     --tip-glow-colour: #f0f;
     
     --terminal-background-colour: rgba(0, 150, 0, 0.7);
+    --terminal-border-colour: rgba(0, 80, 0, 0.6);
 
     --planet-radius: 100%;
 }
@@ -17,6 +18,19 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
+}
+
+main {
+    animation: fadein 1s linear 1 forwards;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .background {
@@ -54,8 +68,21 @@ html, body {
 }
 
 .block-wrapper {
-    @apply flex-col items-center justify-center h-full w-full text-green-400 px-10 py-5;
+    @apply flex-col items-center justify-center text-white h-full w-full px-10 py-5;
 
+    text-shadow: 0 0 10px #3f3, 0 0 30px var(--text-glow-colour), 0 0 50px var(--text-glow-colour);
+
+    background-color: var(--terminal-background-colour);
+    background-image: 
+    radial-gradient(
+        var(--terminal-background-colour), black 120%
+    ),
+    repeating-linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15) 5px, transparent 5px, transparent 10px);
+}
+
+.terminal-window {
+    @apply flex flex-col text-white rounded-3xl md:rounded-[3rem] border-4 md:border-8 p-3 md:p-5;
+    border-color: var(--terminal-border-colour);
     text-shadow: 0 0 10px #3f3, 0 0 30px var(--text-glow-colour), 0 0 50px var(--text-glow-colour);
 
     background-color: var(--terminal-background-colour);
@@ -209,11 +236,18 @@ div.south {
     cursor: pointer;
 }
 
-.menu-sel:hover {
+.menu-sel-highlight {
     /* transition to red text */
     color: #f00;
     text-shadow: 0 0 10px #f33, 0 0 30px var(--highlight-glow-colour), 0 0 50px var(--highlight-glow-colour);
 
     /* transition part */
     transition: color 0.5s ease-in-out;
+}
+
+.bg-sky {
+    background-color: #000;
+    background-image: linear-gradient(
+        #77f, lightblue 80%
+    );
 }

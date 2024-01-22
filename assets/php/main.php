@@ -29,14 +29,17 @@
                     <div id="main" class="block-wrapper hidden">
                         <h2 class="text-white text-4xl md:text-9xl block-title w-full">Select destination</h2>
                         <div class="text-white w-full block-area">
-                            <h3 class="text-lg md:text-5xl mt-3 md:mt-6">
+                            <h3 id="main-desc" class="text-lg md:text-5xl mt-3 md:mt-6">
                                 Welcome to my spaceship! It's called the <span id="porttip" class="highlight">Portfol-io</span>.
                                 <br>
                                 Check out my planet! It contains all the information you need to know about me.
                             </h3>
+                            <h3 id="confirmation" class="text-lg md:text-5xl mt-3 md:mt-6">
+                                
+                            </h3>
                         </div>
                         <div class="text-white w-full h-full flex flex-col md:flex-row">
-                            <div id="planet-select" class="md:h-full md:aspect-square md:mr-auto text-2xl md:text-6xl p-4 md:p-20">
+                            <div id="planet-select" class="md:h-full md:aspect-square md:mr-auto text-2xl md:text-6xl p-4 md:p-32">
                                 <h3 class="menu-sel"><span class="option blink">></span>&nbsp;About</h3>
                                 <h3 class="menu-sel"><span class="option blink">></span>&nbsp;Skills</h3>
                                 <h3 class="menu-sel"><span class="option blink">></span>&nbsp;Projects</h3>
