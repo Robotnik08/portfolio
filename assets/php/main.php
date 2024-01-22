@@ -29,12 +29,12 @@
                     <div id="main" class="block-wrapper hidden">
                         <h2 class="text-white text-4xl md:text-9xl block-title w-full">Select destination</h2>
                         <div class="text-white w-full block-area">
-                            <h3 id="main-desc" class="text-lg md:text-5xl mt-3 md:mt-6">
+                            <h3 id="main-desc" class="text-lg md:text-4xl mt-3 md:mt-6">
                                 Welcome to my spaceship! It's called the <span id="porttip" class="highlight">Portfol-io</span>.
                                 <br>
                                 Check out my planet! It contains all the information you need to know about me.
                             </h3>
-                            <h3 id="confirmation" class="text-lg md:text-5xl mt-3 md:mt-6">
+                            <h3 id="confirmation" class="text-lg md:text-4xl mt-3 md:mt-6">
                                 
                             </h3>
                         </div>

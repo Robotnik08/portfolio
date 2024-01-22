@@ -43,6 +43,7 @@ function update (deltaTime) {
                     break;
                 }
             }
+            
 
             canvas.setColor(color.rgba);
             canvas.drawRect(x * PRECISION, y * PRECISION, PRECISION, PRECISION);

@@ -27,7 +27,7 @@ const optionText = [
 ];
 
 const aboutText = [
-    "I'm a software developer living in South Holland, Netherlands. I'm currently studying Web development at GLU.",
+    "I'm a software developer living in the Netherlands. I'm currently studying Web development at GLU.",
     "I have a wide range of skills, from web development to software engineering. I'm always looking to learn new things.",
     "I've worked on many projects, ranging from small to large. I'm always looking for new projects to work on.",
     "I've worked for a few people and have experience working in a team. I'm always looking for new opportunities.",

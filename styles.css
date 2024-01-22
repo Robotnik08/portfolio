@@ -5,6 +5,7 @@
 :root {
     --text-glow-colour: #00e660;
     --highlight-glow-colour: #e60000;
+    --blue-glow-colour: #00e6ff;
     --tip-glow-colour: #f0f;
     
     --terminal-background-colour: rgba(0, 150, 0, 0.7);
@@ -98,10 +99,14 @@ main {
 }
 
 .highlight {
-    @apply text-red-50;
     cursor: pointer;
     color: #f00;
     text-shadow: 0 0 10px #f33, 0 0 30px var(--highlight-glow-colour), 0 0 50px var(--highlight-glow-colour);
+}
+
+.blue-glow {
+    color: var(--blue-glow-colour);
+    text-shadow: 0 0 10px #33f, 0 0 30px var(--blue-glow-colour), 0 0 50px var(--blue-glow-colour);
 }
 
 @keyframes blinker {
