@@ -26,8 +26,10 @@
                             <p class="text-4xl">Here is a list of all my projects, sorted by date:</p>
 
                             <div class="slide-show-movable w-full h-full bg-pink-500">
-                                <div id="timeline" class="relative top-[95%] w-[98%] m-auto h-1 border-dotted border-8 border-transparent border-b-black">
-                                    
+                                <div class="even project-spot flex">
+                                    <div class="">
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
