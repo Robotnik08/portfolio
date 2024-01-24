@@ -256,3 +256,11 @@ div.south {
         #77f, lightblue 80%
     );
 }
+
+.even {
+    background-color: rgba(0,0,0,0.15);
+}
+
+.uneven {
+    background-color: rgba(0,0,0,0.25);
+}
