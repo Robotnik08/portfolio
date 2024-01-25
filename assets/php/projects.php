@@ -25,23 +25,23 @@
                             <h1 class="text-7xl text-center">My projects</h1>
                             <p class="text-4xl">Here is a list of all my projects, sorted by date:</p>
 
-                            <div class="slide-show-movable mx-3 w-full aspect-[200/95] bg-pink-500 overflow-y-auto snap-mandatory snap-y">
+                            <div class="slide-show-movable mx-3 w-full aspect-[2000/985] overflow-y-auto snap-mandatory snap-y">
                                 <div class="even project-spot flex snap-start">
-                                    <div class="text-block w-full">
-                                        <h2 class="text-7xl">Project name</h2>
-                                        <p class="text-5xl">Project description Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos eius nesciunt vero perferendis repellat sint, corporis architecto ducimus debitis rem, modi fugit pariatur aperiam? Saepe quos suscipit maxime molestiae sed?</p>
+                                    <div class="text-block w-full aspect-square">
+                                        <h2 class="text-7xl m-5">Project name</h2>
+                                        <p class="text-5xl m-5">Project description Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos eius nesciunt vero perferendis repellat sint, corporis architecto ducimus debitis rem, modi fugit pariatur aperiam? Saepe quos suscipit maxime molestiae sed?</p>
 
-                                        <div class="flex flex-row">
-                                            <button class="git-button bg-white mx-auto text-6xl w-1/2 h-full text-green-800">
+                                        <div class="buttons flex flex-row relative bottom-0">
+                                            <button class="git-button bg-white mx-auto text-7xl w-[40%] h-full text-green-800 m-1">
                                                 Github
                                             </button>
     
-                                            <button class="more-button bg-white mx-auto text-4xl w-1/2 h-full text-green-800">
-                                                Learn more
+                                            <button class="more-button bg-white mx-auto text-7xl w-[40%] h-full text-green-800 m-1">
+                                                More...
                                             </button>
                                         </div>
                                     </div>
-                                    <div class="image-block w-full">
+                                    <div class="image-block w-full aspect-square">
                                         <img class="w-full h-full object-contain" src="assets/img/template.png" alt="Project image">
                                     </div>
                                 </div>

@@ -43,8 +43,6 @@
                                 <h3 class="menu-sel"><span class="option blink">></span>&nbsp;About</h3>
                                 <h3 class="menu-sel"><span class="option blink">></span>&nbsp;Skills</h3>
                                 <h3 class="menu-sel"><span class="option blink">></span>&nbsp;Projects</h3>
-                                <h3 class="menu-sel"><span class="option blink">></span>&nbsp;Experience</h3>
-                                <h3 class="menu-sel"><span class="option blink">></span>&nbsp;Education</h3>
                                 <h3 class="menu-sel"><span class="option blink">></span>&nbsp;Hobbies</h3>
                                 <h3 class="menu-sel"><span class="option blink">></span>&nbsp;Contact</h3>
                             </div>
