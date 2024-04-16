@@ -262,6 +262,7 @@ div.south {
 }
 
 .uneven {
+    @apply flex-row-reverse;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
