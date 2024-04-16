@@ -258,9 +258,32 @@ div.south {
 }
 
 .even {
-    background-color: rgba(0,0,0,0.15);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .uneven {
-    background-color: rgba(0,0,0,0.25);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* scroll bar for terminal */
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: var(--terminal-background-colour);
+    border-radius: 5px;
+    background-image: repeating-linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25) 5px, transparent 5px, transparent 10px);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--text-glow-colour);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--blue-glow-colour);
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--terminal-background-colour);
+    border-radius: 5px;
+    background-image: repeating-linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25) 5px, transparent 5px, transparent 10px);
 }
