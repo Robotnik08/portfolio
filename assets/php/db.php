@@ -1,7 +1,5 @@
 <?php
-    $db_host = 'localhost';
-    $db_user = 'root';
-    $db_pass = '';
+    require_once 'config.php';
 
     $db_name = 'portfolio';
     $table_name = 'projects';

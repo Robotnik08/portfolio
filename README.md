@@ -5,7 +5,15 @@ I use tailwindcss for styling.
 
 ## Installation
 
-first, make sure you have npm and php installed on your machine. Then, clone the repository and run the following commands:
+Firstly, you must import the SQL database. You can do this by running the following command:
+
+```bash
+mysql -u username -p database_name < portfolio.sql
+```
+
+Then, go to the `config.php` file and change the database credentials to match your own.<br>
+
+After you installed the database, make sure you have npm and php installed on your machine. Then, clone the repository and run the following commands:
 
 ```bash
 # install dependencies
