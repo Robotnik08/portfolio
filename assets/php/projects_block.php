@@ -24,7 +24,7 @@
         </div>
         <?php if ($projects[$i]['image_link'] != 'none') { ?>
         <div class="image-block">
-            <img class="object-cover h-full" src="assets/img/<?php echo $projects[$i]['image_link']; ?>" alt="Project image">
+            <img class="object-cover h-auto w-full md:h-full md:w-auto" src="assets/img/<?php echo $projects[$i]['image_link']; ?>" alt="Project image">
         </div>
         <?php } ?>
     </div>
