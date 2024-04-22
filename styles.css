@@ -51,6 +51,15 @@ main {
     font-family: "terminal";
 }
 
+a.link {
+    text-shadow: 
+    @apply text-blue-500;
+}
+
+a.link:hover {
+    @apply text-blue-600;
+}
+
 .blink {
     animation: blinker 1s linear infinite;
 }
@@ -237,6 +246,12 @@ div.south {
     }
 }
 
+
+img {
+    @apply rounded-md;
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.6);
+}
+
 .menu-sel {
     cursor: pointer;
 }
@@ -257,12 +272,22 @@ div.south {
     );
 }
 
+@media (min-width: 768px) {
+    .even {
+        @apply flex-row;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .uneven {
+        @apply flex-row-reverse;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
 .even {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
 .uneven {
-    @apply flex-row-reverse;
     background-color: rgba(0, 0, 0, 0.5);
 }
 

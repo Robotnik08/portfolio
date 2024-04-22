@@ -43,7 +43,6 @@
                                 <h3 class="menu-sel"><span class="option blink">></span>&nbsp;About</h3>
                                 <h3 class="menu-sel"><span class="option blink">></span>&nbsp;Skills</h3>
                                 <h3 class="menu-sel"><span class="option blink">></span>&nbsp;Projects</h3>
-                                <h3 class="menu-sel"><span class="option blink">></span>&nbsp;Hobbies</h3>
                                 <h3 class="menu-sel"><span class="option blink">></span>&nbsp;Contact</h3>
                             </div>
                             <div id="planet-render" class="md:h-full aspect-square md:ml-auto">
@@ -58,7 +57,7 @@
                 </div>
             </div>
 
-            <div class="absolute tip text-white text-6xl bg-purple-900 rounded-xl p-3 terminal tip-text drop-shadow-lg">
+            <div class="absolute tip text-white text-3xl md:text-5xl bg-purple-900 rounded-md md:rounded-xl p-1 md:p-3 terminal tip-text drop-shadow-md md:drop-shadow-lg">
                 
             </div>
         </main>

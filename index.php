@@ -8,8 +8,12 @@
     } else {
         // check if page exists
         if (!file_exists('assets/php/' . $path[0] . '.php')) {
-            include_once 'assets/php/404.php';
-            exit();
+            if (!file_exists('project_assets/' . $path[0] . '.php')) {
+                include_once 'assets/php/404.php';
+                exit();
+            }
+
+            include_once 'project_assets/' . $path[0] . '.php';
         }
 
         include_once 'assets/php/' . $path[0] . '.php';

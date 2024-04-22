@@ -20,23 +20,8 @@ const optionText = [
     "About",
     "Skills",
     "Projects",
-    "Experience",
-    "Education",
-    "Hobbies",
     "Contact"
 ];
-
-const aboutText = [
-    "I'm a software developer living in the Netherlands. I'm currently studying Web development at GLU.",
-    "I have a wide range of skills, from web development to software engineering. I'm always looking to learn new things.",
-    "I've worked on many projects, ranging from small to large. I'm always looking for new projects to work on.",
-    "I've worked for a few people and have experience working in a team. I'm always looking for new opportunities.",
-    "I've studied at GLU for 2 years and have learned a lot. In the future I'm looking to study at a university.",
-    "I have many hobbies, ranging from programming to gaming.",
-    "My contact information is listed below. Feel free to contact me."
-];
-
-let confirmation = -1;
 
 function selectOption(index) {
     for (let i = 0; i < options.length; i++) {
@@ -51,24 +36,9 @@ function selectOption(index) {
     options[index].parentElement.classList.add("menu-sel-highlight");
 }
 
-function cancelConfirmation() {
-    confirmation = false;
-    confirmationText.style.display = "none";
-    mainText.style.display = "block";
-}
 
 function trueSelectOption(index) {
     selectOption(index);
-
-    if (confirmation != index) {
-        confirmation = index;
-        confirmationText.style.display = "block";
-        confirmationText.innerHTML = aboutText[index];
-        confirmationText.innerHTML += "<br>Select the option again to land here and learn more!";
-        mainText.style.display = "none";
-
-        return;
-    }
 
     
     // terminal closes
