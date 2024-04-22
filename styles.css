@@ -52,8 +52,9 @@ main {
 }
 
 a.link {
-    text-shadow: 
+    text-shadow: none;
     @apply text-blue-500;
+    text-decoration: none;
 }
 
 a.link:hover {

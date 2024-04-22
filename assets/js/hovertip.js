@@ -98,3 +98,15 @@ if (chessTip != null) {
         hideTip();
     });
 }
+
+const emailTip = document.getElementById("emailtip");
+
+if (emailTip != null) {
+    emailTip.addEventListener("mouseover", () => {
+        showTip("Click to copy my email address!");
+    });
+    
+    emailTip.addEventListener("mouseout", () => {
+        hideTip();
+    });
+}
