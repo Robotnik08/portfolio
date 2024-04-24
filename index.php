@@ -14,6 +14,7 @@
             }
 
             include_once 'project_assets/' . $path[0] . '.php';
+            exit();
         }
 
         include_once 'assets/php/' . $path[0] . '.php';
