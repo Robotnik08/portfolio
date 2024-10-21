@@ -23,7 +23,7 @@
                     <div id="main" class="terminal-window w-[90%] h-[95%] md:w-3/4 md:h-[90%] terminal overflow-y-scroll md:overflow-hidden">
                         <h1 class="text-5xl md:text-7xl text-center">About me.</h1>
                         <div class="items">
-                            <p class="text-2xl md:text-4xl inline md:block">Hello! I'm Sebastiaan Heins, I'm 18 years old and love programming/learning new stuff.</p>
+                            <p class="text-2xl md:text-4xl inline md:block">Hello! I'm Sebastiaan Heins, I'm 19 years old and love programming/learning new stuff.</p>
                             <p class="text-2xl md:text-4xl inline md:block">I'm currently studying <span id="web-dev-tip" class="highlight">Web development</span> at <span id="GLU-tip" class="highlight">GLU</span> in <span id="Utrecht-tip" class="highlight">Utrecht</span>.</p>
                             <p class="text-2xl md:text-4xl inline md:block">I live in Wassenaar, the Netherlands, a town near The Hague.</p>
 
